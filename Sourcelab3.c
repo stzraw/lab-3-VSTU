@@ -4,14 +4,32 @@
 #define      D       2.54
 #define      M       2.32166
 
+int task1();
+int task2();
+int task2mod();
+int task3();
+
+int main()
+{
+	setlocale(LC_CTYPE, "RUS");
+	task1();
+	task2();
+	task2mod();
+	task3();
+	
+	return 0;
+}
+
+
+
 int task1()
 {
 	int num,num2;
-	puts("Введите число:");
+	puts("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г®:");
 	scanf_s("%d", &num);
-	printf("Введено число %d\n", num);
+	printf("Г‚ГўГҐГ¤ГҐГ­Г® Г·ГЁГ±Г«Г® %d\n", num);
 	scanf_s("%d", &num2);
-	printf("Введено число %d\n", num2);
+	printf("Г‚ГўГҐГ¤ГҐГ­Г® Г·ГЁГ±Г«Г® %d\n", num2);
 	printf("%d %d %d %d %d\n", num + num2, num - num2, num * num2, num2 / num, num2 % num);
 	return 0;
 
@@ -22,10 +40,10 @@ int task2()
 	int dym;
 	float result;
 
-	puts("Введите число для расчета:");
+	puts("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Г¤Г«Гї Г°Г Г±Г·ГҐГІГ :");
 	scanf_s("%d", &dym);
 	result = D * dym;
-	printf("%d дюймов – это % .1f см\n", dym, result);
+	printf("%d Г¤ГѕГ©Г¬Г®Гў вЂ“ ГЅГІГ® % .1f Г±Г¬\n", dym, result);
 	return 0;
 
 }
@@ -35,10 +53,10 @@ int task2mod()
 	int pul;
 	float result;
 
-	puts("Введите число для расчета:");
+	puts("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Г¤Г«Гї Г°Г Г±Г·ГҐГІГ :");
 	scanf_s("%d", &pul);
 	result = M * pul;
-	printf("%d pulgada – это % .4f см\n", pul, result);
+	printf("%d pulgada вЂ“ ГЅГІГ® % .4f Г±Г¬\n", pul, result);
 	return 0;
 
 }
@@ -46,7 +64,7 @@ int task2mod()
 int task3()
 {
 	float a, b;
-	puts("Введите числа для расчета:");
+	puts("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г  Г¤Г«Гї Г°Г Г±Г·ГҐГІГ :");
 	scanf_s("%f %f", &a, &b);
 	puts("------------------------------------------");
 	printf("|   a * b     |   a + b     |   a - b    |\n");
@@ -56,14 +74,4 @@ int task3()
 	printf ("|%-11.2f  |%-11.2f  |%-11.2f |\n",a*b, a+b, a-b);
 	puts("------------------------------------------");
 	return 0;
-}
-
-int main()
-{
-	setlocale(LC_CTYPE, "RUS");
-	task1();
-	task2();
-	task2mod();
-	task3();
-
 }
